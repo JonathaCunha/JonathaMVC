@@ -1,0 +1,39 @@
+﻿@model WebApp.Models.Empresa
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Delete</h1>
+
+<h3>Tem Certeza que deseja excluir esta empresa?</h3>
+<div>
+    <h4>Empresa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Site)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Site)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QuantidadeFuncionarios)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QuantidadeFuncionarios)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Deleta" class="btn btn-danger" /> |
+        <a asp-action="Index">Volta</a>
+    </form>
+</div>
